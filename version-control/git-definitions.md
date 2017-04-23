@@ -1,4 +1,5 @@
 # Git Definitions
+## You can do it!
 
 **Instructions: ** Define each of the following Git concepts.
 
