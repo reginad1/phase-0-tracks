@@ -1,0 +1,6 @@
+<snippet>
+  <content><![CDATA[How are you doing?
+]]></content>
+  <tabTrigger>Hello!</tabTrigger>
+  <scope>text.html</scope>
+</snippet>
