@@ -8,3 +8,7 @@
   }
 
 .accomplishments {font-size: 0.8em;}
+
+.job:hover{background-color: lightcoral;}
+
+section > section {color: sienna;}
