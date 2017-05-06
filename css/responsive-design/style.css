@@ -20,7 +20,6 @@ cite {
   vertical-align: top;
   width: 15%;
   padding: 10px;
-
 }
 
 /* you're welcome to edit the
@@ -53,5 +52,30 @@ body {
 @media screen and (max-width: 500px) {
   body {
     background-color: hotpink;
+  }
+}
+@media screen and (min-width: 600px) {
+  #external-links{
+    display: inline-block;
+    vertical-align: top;
+    width: 15%
+  }
+  #main {
+    display: inline-block;
+    vertical-align: top;
+    width: 80%
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #external-links {
+    display: inline;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 14px;
   }
 }
