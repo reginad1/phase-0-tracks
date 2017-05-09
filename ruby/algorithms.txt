@@ -1,0 +1,43 @@
+Elevator Algorithm
+-Tell robot current floor and desired floor (current_floor = x; desired_floor = y)
+-If y > x
+  -press up button
+-Otherwise
+  -press down button
+-Enter elevator
+
+#The following instructions are assuming that elevator buttons are arranged with numbers ascending from left to right and beginning on the second row of buttons with door open and door close buttons located on the first row (google elevator buttons)
+
+-Until button number = desired floor
+  -Begin counting buttons at bottom left corner of buttons.
+  -Count buttons
+
+-When button number = desired floor press button
+-Stay on elevator while it travels to desired floor
+-When elevator chimes = desired floor exit elevator
+
+Coffee Algorithm
+-If French press pot is not clean
+  -wash French press pot
+-Otherwise
+ -Measure five heaping tablespoons of coffee beans into coffee bean grinder
+ -Put lid on coffee bean grinder
+-Set coffee bean grinder to course grind
+-Press button to start coffee grinder
+-When coffee bean grinder turns off, remove lid
+-Pour coffee grounds into clean French press pot
+-Boil water
+-Until water boils
+  -look at news or do a mini crossword puzzle
+-When water is boiled, pour water over coffee grounds in French press pot.
+-Stir coffee grounds and boiled water rapidly for thirty seconds.
+-Put French press pot top on water and coffee grounds
+  -Do not press coffee yet
+-Until five minutes passes
+  -Return to news or crossword
+-When five minutes has passed press grounds down
+-If you take coffee black
+  -Pour coffee into cup and enjoy
+-Otherwise
+  -Prepare with desired amount of cream and sugar
+  -Pour coffee into cup and enjoy.
