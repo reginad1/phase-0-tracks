@@ -1,3 +1,37 @@
-body {
-  background-color: lightblue;
+*{
+  font-family: Arial, sans-serif;
 }
+header {
+  background-color: #3399ff;
+  padding: 20px;
+  margin-bottom: 10px;
+  }
+
+h1{
+  width: 30%;
+ }
+
+.column-1 {
+  background-color: lightblue;
+  float: left;
+  width:47%;
+  height: 1200px;
+  padding: 10px;
+}
+.column-2 {
+  background-color: lightblue;
+  float: right;
+  width: 47%;
+  height: 1200px;
+  padding: 10px;
+ }
+
+ footer {
+   clear: both;
+   height: 100px;
+   padding: 20px;
+   background-image: url("https://pisces.bbystatic.com/BestBuy_US/store/ee/2017/com/pol/pol_evn25088_170312.jpg");
+   background-repeat:no-repeat;
+   background-size: 65px 65px;
+   background-position: right top;
+   }
