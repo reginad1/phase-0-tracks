@@ -31,7 +31,7 @@ return string
 end
 
 
-decrypt(encrypt("swordfish"))
+#decrypt(encrypt("swordfish"))
 
 puts "Hello secret agent! Would you like to decrypt or encrypt a password?"
   choice = gets.chomp
@@ -43,8 +43,8 @@ puts "Hello secret agent! Would you like to decrypt or encrypt a password?"
 puts "What is your password?"
     password = gets.chomp
     if choice == "encrypt"
-    encrypt(password)
+    p encrypt(password)
     elsif choice == "decrypt"
-    decrypt(password)
+    p decrypt(password)
     end
 
