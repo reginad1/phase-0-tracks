@@ -59,7 +59,7 @@ dog_names.keep_if { |number, name| name.include? "u"}
 #another way to filter data
 rainy_months = {
   january: 2,
-  february: 1.5,
+  february: 1,
   march: 3,
   april: 5,
   may: 5,
