@@ -19,21 +19,32 @@ spy_name = name.split(' ')
 new_name = spy_name.reverse.join(' ')
 letters = new_name.downcase.split('')
 
-letters.map! do |letter|
-  letters.join
-  letter.tr('aeiou', 'eioua')
+    letters.map! do |letter|
+      letters.join
+      letter.tr('aeiou', 'eioua')
+    end
 
-end
-
-letters.map! do |letter|
-  letters.join.class
-  letter.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
-end
+    letters.map! do |letter|
+      letters.join.class
+      letter.tr('bcdfghjklmnpqrstvwxyz', '    cdfghjklmnpqrstvwxyzb')
+    end
 
 letters.join
 
 end
 
-puts "What is your first and last name?"
-name = gets.chomp
-name_reverse(name)
+valid_input = false
+
+  while valid_input == false
+    puts "What is your first and last name? Type quit when done."
+    name = gets.chomp
+
+    if name == "quit"
+      puts "Thank you"
+      valid_input = true
+    else
+      name_reverse(name)
+      p "Your fake name is #{name_reverse(name)}"
+      valid_input = false
+    end
+  end
