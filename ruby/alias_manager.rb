@@ -5,23 +5,38 @@
   #call .reverse to swap last name with first name.
   #convert reversed names into an array of individual letters.
 
-
-def name_reverse (name)
-spy_name = name.split
-new_name = spy_name.reverse.join
-new_name.to_s
-new_name.split('')
-p new_spy_name = new_name.downcase.split('')
-end
-
-puts "What is your first and last name?"
-name = gets.chomp
-name_reverse(name)
-
 #make a new array called vowels, containing 'a','e','i','o','u'
 #use index to identify vowel
 #iterate through the array, to search for vowels.  Anytime a vowel is present, perform .next to move to next vowel in vowel array.
 
 #create an array called vowels containing 'aeiou'
 #iterate through spy_name
-vowels = ['a','e','i','o','u']
+
+
+def name_reverse (name)
+p spy_name = name.split(' ')
+p new_name = spy_name.reverse.join
+p new_name.class
+letters = new_name.downcase.split('')
+
+letters.map! do |letter|
+  letters.join
+  letter.tr('aeiou', 'eioua')
+
+end
+
+letters.map! do |letter|
+  letters.join.class
+  letter.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb')
+end
+
+letters.join
+
+
+end
+
+puts "What is your first and last name?"
+name = gets.chomp
+name_reverse(name)
+
+
