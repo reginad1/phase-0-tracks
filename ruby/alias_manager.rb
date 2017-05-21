@@ -34,6 +34,7 @@ letters.join
 end
 
 valid_input = false
+agent_names = {}
 
   while valid_input == false
     puts "What is your first and last name? Type quit when done."
@@ -47,4 +48,12 @@ valid_input = false
       p "Your fake name is #{name_reverse(name)}"
       valid_input = false
     end
+
+  agent_names[name] = name_reverse(name)
   end
+
+
+agent_names.delete_if {|name, name_reverse| name.include? "quit"}
+agent_names.each do |name, name_reverse|
+ puts "#{name_reverse} is actually agent #{name}."
+ end
