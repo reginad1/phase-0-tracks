@@ -4,13 +4,25 @@
   #make spy_name variable to call split on user input for 'real name' which will turn the string into an array.
   #call .reverse to swap last name with first name.
   #convert reversed names into an array of individual letters.
+  #iterate though letters in the name array.
+    #turn each letter in the array into a string?
+    #compare letter with another string
+      #if letter is a vowel, compare it with a string of vowels.
+      #replace that letter with the next vowel in the string of vowels.
+    #compare letter with another string
+      #if letter is a consonant, compare consonant with a string of consonants.
+      #replace the letter with the next consonant in the string of consonants.
 
-#make a new array called vowels, containing 'a','e','i','o','u'
-#use index to identify vowel
-#iterate through the array, to search for vowels.  Anytime a vowel is present, perform .next to move to next vowel in vowel array.
+#add loop to ask user their name.  if they type quit, stop the loop.  if they type a name, run the name through the method above.
 
-#create an array called vowels containing 'aeiou'
-#iterate through spy_name
+#create an empty hast.  assign key value to name (which user will input) and assign value to method name.
+
+#outside of loop, delete 'quit' from hash (user will input quit to exit the loop, but we don't want that to appear in the hash of real names and alias name).
+
+#iterate through hash and for each key & value set, print the real name and the fake name.
+
+
+
 
 
 def name_reverse (name)
