@@ -14,9 +14,9 @@
 
 
 def name_reverse (name)
-p spy_name = name.split(' ')
-p new_name = spy_name.reverse.join
-p new_name.class
+spy_name = name.split(' ')
+
+new_name = spy_name.reverse.join(' ')
 letters = new_name.downcase.split('')
 
 letters.map! do |letter|
@@ -32,11 +32,8 @@ end
 
 letters.join
 
-
 end
 
 puts "What is your first and last name?"
 name = gets.chomp
 name_reverse(name)
-
-
