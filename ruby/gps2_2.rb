@@ -57,9 +57,23 @@ new_item_hash = add_grocery("pears","2")
 newest_groceries = grocery_hash.merge(new_item_hash)
 newest_groceries
 
-def remove(item)
-newest_groceries.delete(item)
+def remove_item(newest_groceries,item)
+ newest_groceries.delete(item)
+end
+p remove_item(newest_groceries,'apples')
+ newest_groceries
+
+
+def change_qty(newest_groceries,keyword,value)
+  newest_groceries[keyword] = value
+end
+change_qty(newest_groceries,'pears',4)
 p newest_groceries
+
+
+def mk_pretty(newest_groceries)
+  newest_groceries.each do |type,qty|
+  puts "there are #{qty} #{type}"
 end
 
-remove("apples")
+p mk_pretty(newest_groceries
