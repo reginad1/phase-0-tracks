@@ -29,51 +29,35 @@
 
 
 def groceries(items)
-grocery_arr = items.split(' ')
+  grocery_arr = items.split(' ')
 end
-
-
-
 def qty_list(quantities)
   qty_arr = quantities.split(' ')
 end
-
-
-
 def create_list(x,y)
   Hash[groceries(x).zip(qty_list(y))]
 end
-
-
 grocery_hash =  create_list("apples kiwis bananas","2 4 6")
   p grocery_hash
-
-
 def add_grocery(x,y)
   Hash[groceries(x).zip(qty_list(y))]
 end
-
 new_item_hash = add_grocery("pears","2")
 newest_groceries = grocery_hash.merge(new_item_hash)
-newest_groceries
-
+p newest_groceries
 def remove_item(newest_groceries,item)
  newest_groceries.delete(item)
 end
-p remove_item(newest_groceries,'apples')
- newest_groceries
-
-
+remove_item(newest_groceries,'apples')
+p newest_groceries
 def change_qty(newest_groceries,keyword,value)
   newest_groceries[keyword] = value
 end
 change_qty(newest_groceries,'pears',4)
 p newest_groceries
-
-
 def mk_pretty(newest_groceries)
   newest_groceries.each do |type,qty|
   puts "there are #{qty} #{type}"
+  end
 end
-
-p mk_pretty(newest_groceries
+p mk_pretty(newest_groceries)
