@@ -1,4 +1,6 @@
 class Santa
+attr_reader :age, :ethnicity
+attr_accessor :gender
 
   def speak
     puts "Ho ho ho! Haaaaaaappy holidays!"
@@ -24,6 +26,7 @@ class Santa
     @reindeer_ranking.insert(8, @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer_name)))
   end
 
+
 end
 
 santas = []
@@ -36,3 +39,6 @@ end
 p santa = Santa.new("non binary", "white")
 p santa.celebrate_birthday
 p santa.get_mad_at("Vixen")
+p santa.gender = "non conforming"
+p santa.age
+p santa.ethnicity
