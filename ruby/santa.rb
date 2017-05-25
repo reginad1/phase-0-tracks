@@ -19,7 +19,7 @@ attr_accessor :gender
   end
 
   def celebrate_birthday
-    @age = @age + 1
+    @age = rand(1..140)
   end
 
   def get_mad_at(reindeer_name)
@@ -29,16 +29,26 @@ attr_accessor :gender
 
 end
 
-santas = []
 example_genders = ["non binary", "female", "male", "agender"]
 example_ethnicities = ["black", "white", "Japanese", "Puerto Rican"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
+# example_genders.length.times do |i|
+#   santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
 
-p santa = Santa.new("non binary", "white")
-p santa.celebrate_birthday
-p santa.get_mad_at("Vixen")
-p santa.gender = "non conforming"
-p santa.age
-p santa.ethnicity
+# p santa = Santa.new("non binary", "white")
+# p santa.celebrate_birthday
+# p santa.get_mad_at("Vixen")
+# p santa.gender = "non conforming"
+# p santa.age
+# p santa.ethnicity
+
+santas = []
+
+count = 0
+while count < 150
+  new_santa = Santa.new(example_genders, example_ethnicities)
+  santas << new_santa
+  puts "Gender: #{example_genders.sample}; Ethnicity: #{example_ethnicities.sample}; Age: #{new_santa.celebrate_birthday}"
+
+  count+= 1
+end
