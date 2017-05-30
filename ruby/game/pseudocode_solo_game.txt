@@ -1,0 +1,20 @@
+
+#Method to collect word from user number 1
+  #input: string
+  #method will accept the string and split it into an array so each letter in the word is indexed.
+  #output: an array of letters not accessible to user
+
+#Method to replace word with a _ for each letter in the word
+  #input: integer
+  #method will accept string.length and create a new array
+  #output: an array where strings letters are replaced with _.  User needs to see this.
+
+#Method to check for letters
+  #input: string (letter)
+  #method will check the first array for the letter the user provides.  If  that letter is present in that array, letter needs to replace _ at the same index in the _ _ _ array.
+  #output: updated array either with letter if letter appeared, or without  letter if it was not present in first array.
+
+#While loop
+  #While number of guesses is less than or equal to the string length, allow user to keep guessing letters.
+  #When number of guesses is greater than string length, game is over.
+  #if user guesses letter that they've already guessed, do not count as a guess.
