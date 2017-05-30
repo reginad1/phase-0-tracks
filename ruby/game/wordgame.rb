@@ -35,18 +35,22 @@ puts "Hi user 2.. here is your clue: \n #{game.user_clue}\n"
 
 guesses = 1
 
-until guesses >= word.length + 5
+allowed_guesses = word.length + 5
 
-  if word != @word_reveal
+until guesses >= allowed_guesses
+ game.word_reveal
+
   puts "Enter a letter to guess the word."
   letter = gets.chomp
   game.letter_checker(letter)
-  elsif word == @word_reveal
-  p @word_reveal
-  break
-  puts "you won"
-  end
 
+  if word == game.word_reveal.join()
+    puts "you won!"
+  break
+
+  end
 
   guesses += 1
 end
+
+puts "You lost :("
