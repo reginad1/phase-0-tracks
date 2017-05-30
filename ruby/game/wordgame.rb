@@ -21,13 +21,13 @@ attr_accessor :word_array, :word_reveal
       else
         puts "Nope, try again."
       end
-      p @word_reveal
+  @word_reveal
   end
 end
 
 puts "Hello user 1! Please enter a word to start the game"
   word = gets.chomp
-  game = WordGame.new(word)
+  p game = WordGame.new(word)
 
 puts "Hi user 2.. here is your clue: \n #{game.user_clue}\n"
 
@@ -42,7 +42,7 @@ until guesses >= allowed_guesses
 
   puts "Enter a letter to guess the word."
   letter = gets.chomp
-  game.letter_checker(letter)
+  p game.letter_checker(letter)
 
   if word == game.word_reveal.join()
     puts "you won!"
@@ -53,4 +53,6 @@ until guesses >= allowed_guesses
   guesses += 1
 end
 
-puts "You lost :("
+if word != game.word_reveal.join()
+  puts "You lost :("
+end
