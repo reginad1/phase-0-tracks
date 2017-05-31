@@ -112,3 +112,8 @@ alaska.virus_effects
 # end
 #=======================================================================
 # Reflection Section
+#The different syntaxes in the state data file deal with the hash.  The differences are the "big hash" or "hashy hash" has an (=) and the state hash inside that hash has uses a (=>).  The other difference is that within the individual state hashes, there is a : separating the keys and values.
+#Require_relative and require both allow you to load a file relative to the file you are working with.  Require relative is a feature that was updated in Ruby 1.9 so that you don't have to write out the entire path of the file.
+#To iterate through a hash you can use .each or .map along with block methods.
+#The variables found in STATE_DATA stood out.  Those were the variables that were repeated the most frequently in virus_effects, and they were also part of the STATE_DATA hash, which made it seem like refactoring could be possible.
+#This challenge made me more comfortable iterating through hashes, especially bigger hashes that I hadn't worked with yet.
