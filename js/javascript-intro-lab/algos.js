@@ -12,7 +12,14 @@ sorted = array.sort(function (a, b) {
 console.log(sorted[0])
 }
 
-//Release 1: Return
+//Release 1: Return true or false.  Create a simple function to have items to compare.  Create another function to assess true or false.  if the first key is equal to the second key in a different function, print true.  If the second key is equal to the second key in that function, print true.  Print false if no keys equal each other.
+
+function Boy(name, age, likes_music){
+  this.name = name
+  this.age = age
+  this.likes_music = likes_music
+  }
+
 function trueorFalse(x, y) {
 
 
@@ -28,14 +35,10 @@ if (x.name == y.name) {
 }
 
 
-  function Boy(name, age, likes_music){
-  this.name = name
-  this.age = age
-  this.likes_music = likes_music
-  }
 
 //Release 2
-//function that takes a number.  Use that number to define the length of an array.  For each item in that array replace with a string of various lengths with any letters.
+//function that takes a number as an argument.  Create an empty array.  While array's length is less than the number, create a word and push that word to the empty array.
+//creating a word: create a variable called letters that equals a string of the alphabet.  create a variable with an empty string.  Create a variable with potential length numbers (1 - 10) and create a variable for generating a random number from the array of potential length numbers.   Use the random number that is generated to determine the length of a new word, and produce a string from random indexes in the alphabet string.
 
 function stringMaker(number) {
 this.number = number;
