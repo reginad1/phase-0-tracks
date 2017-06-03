@@ -74,3 +74,13 @@ trueorFalse(oneBoy, twoBoy)
 
 //test Release 2
 console.log(stringMaker(3))
+
+for (var i=0; i < 10; i++) {
+  var lengthNumbers = [1, 2, 3, 4, 5];
+  var randomNumber = lengthNumbers[Math.floor(Math.random() * lengthNumbers.length)];
+  var x = stringMaker(randomNumber)
+
+  console.log(x)
+  console.log(longestWord(x))
+
+}
