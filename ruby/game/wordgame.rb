@@ -1,23 +1,23 @@
 class WordGame
-attr_accessor :word_array, :word_reveal
+attr_accessor :word_reveal
 
   def initialize(secret_word)
     @secret_word = secret_word
-    @word_array = @secret_word.split('')
     @word_reveal = []
-
   end
 
   def user_clue
-     @word_reveal = @word_array.map! do |letter|
+     @word_reveal = @secret_word.split('').map! do |letter|
       letter.tr('abcdefghijklmnopqrstuvwxyz', '_')
     end
   end
 
   def letter_checker(letter)
       if @secret_word.include? (letter)
-        new_index = @secret_word.index(letter)
-        @word_reveal[new_index] = letter
+      @new_index = @secret_word.split('').each_index.select {|x| @secret_word.split('')[x] == letter}
+      @new_index.each do |i|
+        @word_reveal[i] = letter
+        end
       else
         puts "Nope, try again."
       end
