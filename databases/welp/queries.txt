@@ -1,0 +1,16 @@
+2. Join all of the tables in a not very readable way:
+
+SELECT users.first_name, businesses.name, reviews.stars, reviews.comments FROM users JOIN users ON reviews.user_id = users.id;
+
+3. This joins the three tables in a readable and clean way.
+
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews
+   ...> INNER JOIN users on reviews.user_id = users.id
+   ...> INNER JOIN businesses on reviews.business_id = businesses.id;
+
+4.To view information from just one business
+
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews
+   ...> JOIN users on reviews.user_id = users.id
+   ...> JOIN businesses on reviews.business_id=businesses.id  WHERE businesses.name = "Lotus Yoga";
+
