@@ -1,0 +1,87 @@
+1. Display the information in one table (either table is fine).
+
+SELECT * FROM houses;
+1|Log Turner|45|true|2
+2|Lego House|30|true|2
+3|Woolvine House|5|true|2
+4|Farn House|32|true|3
+5|John's House|20|false|1
+6|Lottie's House|15|true|1
+
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+
+UPDATE houses SET name="Reggie's House" WHERE name="Lottie's House";
+sqlite> SELECT * FROM houses;
+1|Log Turner|45|true|2
+2|Lego House|30|true|2
+3|Woolvine House|5|true|2
+4|Farn House|32|true|3
+5|John's House|20|false|1
+6|Reggie's House|15|true|1
+
+
+Display the information in both tables using one query.
+
+SELECT * FROM houses, streets WHERE houses.streets_id = streets.id;
+1|Log Turner|45|true|2|2|Progress Street
+2|Lego House|30|true|2|2|Progress Street
+3|Woolvine House|5|true|2|2|Progress Street
+4|Farn House|32|true|3|3|Main Street
+5|John's House|20|false|1|1|Virginia Street
+6|Reggie's House|15|true|1|1|Virginia Street
+
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+
+SELECT houses.name, houses.age, houses.is_cool_house, streets.name FROM houses JOIN streets ON houses.streets_id = streets.id;
+Log Turner|45|true|Progress Street
+Lego House|30|true|Progress Street
+Woolvine House|5|true|Progress Street
+Farn House|32|true|Main Street
+John's House|20|false|Virginia Street
+Reggie's House|15|true|Virginia Street
+
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+
+
+DELETE FROM houses WHERE is_cool_house="false";
+sqlite> SELECT * FROM houses;
+1|Log Turner|45|true|2
+2|Lego House|30|true|2
+3|Woolvine House|5|true|2
+4|Farn House|32|true|3
+6|Reggie's House|15|true|1
+
+
+RELEASE 3 Join statements:
+
+INNER JOIN:
+
+SELECT houses.name, houses.age, streets.name FROM houses INNER JOIN streets on houses.streets_id = streets.id;
+Log Turner|45|Progress Street
+Lego House|30|Progress Street
+Woolvine House|5|Progress Street
+Farn House|32|Main Street
+Reggie's House|15|Virginia Street
+
+** this join combines the two tables where the tables intersect.  In this case it is at the houses.streets_id and the street id.
+
+LEFT JOIN:
+
+SELECT houses.name, streets.name FROM houses LEFT JOIN streets ON houses.streets_id = streets.id;
+Log Turner|Progress Street
+Lego House|Progress Street
+Woolvine House|Progress Street
+Farn House|Main Street
+John's House|Virginia Street
+Reggie's House|Virginia Street
+
+RIGHT JOIN:
+
+select houses.name, streets.name FROM houses RIGHT JOIN streets ON houses.streets_id = streets.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+** I believe I'm getting this error because the streets table does not have a foreign key for the houses..
