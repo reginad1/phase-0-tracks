@@ -18,7 +18,7 @@ db.execute(create_table_cmd)
 
 puts "Enter your name to take the podcast quiz!"
 name = gets.chomp
-puts "Answer yes or no to the following questions to receive your podcast suggestion!\n"
+puts "Answer yes or no to the following questions to receive your podcast suggestion!"
 puts "Do you enjoy stories that tug at your heartstrings?"
 hearts = gets.chomp
 puts "Do you enjoy stories that disturb you or leave you feeling unsettled?"
@@ -39,7 +39,11 @@ elsif (hearts == "no") && (disturb == "no") && (news == "yes") && (learning == "
   podcast = "NPR Politics"
 elsif(hearts == "no") && (disturb == "no") && (news == "no") && (learning == "yes") && (adult == "no")
   podcast = "TED Radio Hour"
+elsif (hearts == "yes") && (disturb == "yes") && (news == "no") && (learning == "no") && (adult == "yes")
+  podcast = "My Favorite Murder"
 end
 
 
 db.execute("INSERT INTO podcasts_list (name, podcasts) VALUES ('#{name}', '#{podcast}')")
+
+puts db.execute("SELECT * FROM podcasts_list")
