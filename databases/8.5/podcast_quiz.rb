@@ -39,11 +39,13 @@ elsif (hearts == "no") && (disturb == "no") && (news == "yes") && (learning == "
   podcast = "NPR Politics"
 elsif(hearts == "no") && (disturb == "no") && (news == "no") && (learning == "yes") && (adult == "no")
   podcast = "TED Radio Hour"
-elsif (hearts == "yes") && (disturb == "yes") && (news == "no") && (learning == "no") && (adult == "yes")
+elsif (hearts == "yes") && (disturb == "no") && (news == "no") && (learning == "no") && (adult == "yes")
+  podcast = "The Moth"
+elsif (hearts == "no") && (disturb == "yes") && (news == "no") && (learning == "no") && (adult == "yes")
   podcast = "My Favorite Murder"
 end
 
 
 db.execute("INSERT INTO podcasts_list (name, podcasts) VALUES ('#{name}', '#{podcast}')")
 
-puts db.execute("SELECT * FROM podcasts_list")
+p db.execute("SELECT * FROM podcasts_list")
