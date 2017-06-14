@@ -20,4 +20,6 @@ to the user like a dedicated server.  In order to host your website online,
 you need to have your files available on a server.  
 One of the main benefits of using a VPS is that subscriber has unrestricted 
 access to the VPS, giving you control over your server, without using middle
-man.  It also can provide privacy.   
+man.  It also can provide privacy.  
+
+You don't want to be logged in as a root user because it creates a security issue.  If you are logged in as root, everything is accessible without any restrictive settings that would be implemented as a user.   
