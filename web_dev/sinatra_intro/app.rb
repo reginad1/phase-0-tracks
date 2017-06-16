@@ -9,7 +9,7 @@ db.results_as_hash = true
 # add a query parameter
 # GET /
 get '/' do
-  "#{params[:name]} is #{params[:age]} years old."
+ "#{params[:name]} is #{params[:age]} years old."
 end
 
 # write a GET route with
@@ -23,8 +23,28 @@ get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
 end
 
-# write a GET route that retrieves
-# all student data
+get '/contact' do 
+  "www.funwithapps.com"
+end
+
+get '/great_job/:name' do 
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end 
+end 
+
+get '/:numb1/:numb2' do 
+  a = params[:numb1].to_i 
+  b = params[:numb2].to_i
+  add = a + b 
+  "#{add}"
+end 
+
+# # write a GET route that retrieves
+# # all student data
 get '/students' do
   students = db.execute("SELECT * FROM students")
   response = ""
