@@ -37,11 +37,10 @@ get '/great_job/:name' do
 end 
 
 get '/:numb1/:numb2' do 
-  
-  "#{params[:numb1]}" + "#{params[:numb2]}" 
-
-
-
+  a = params[:numb1].to_i 
+  b = params[:numb2].to_i
+  add = a + b 
+  "#{add}"
 end 
 
 # # write a GET route that retrieves
